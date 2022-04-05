@@ -11,30 +11,34 @@ def welcome_user():
 welcome_user()
 
 
+question_made = 1
+
+
 def question():
-    questions_made = 1
-    num = randint(1, 99)
+    num = randint(1,99)
     even = (num % 2) == 0
     print(f'Question: {num}')
     player_answer = prompt.string('Your answer: ')
     if even:
         if player_answer == str('yes'):
             print('Correct!')
-            questions_made = questions_made + 1
-            if questions_made == 3:
-                return (f'Congratulations, {name}!')
+            if question_made < 3:
+                question_made = question_made + 1
+                print(question_made)
+                return question
             else:
-                return question()
+                return (f'Congratulations, {name}!')
         else:
-            return print(f"'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {name}!")
+            return print(f"'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again {name}!")
     else:
         if player_answer == str('no'):
             print('Correct!')
-            questions_made = questions_made + 1
-            if questions_made == 3:
-                return (f'Congratulations, {name}!')
+            if question_made < 3:
+                question_made = question_made + 1
+                print(question_made)
+                return question
             else:
-                return question()
+                return (f'Congratulations, {name}!')
         else:
-            return print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {name}!")
+            return print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again {name}!")
 question()
