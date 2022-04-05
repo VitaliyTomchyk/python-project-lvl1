@@ -33,3 +33,11 @@ def question():
     else:
         return print(f'Congratulations, {name}!')
 question()
+
+
+def main():
+    question()
+
+
+if __name__ == '__main__':
+    main()
