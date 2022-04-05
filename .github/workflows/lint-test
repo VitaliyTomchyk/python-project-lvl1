@@ -14,6 +14,6 @@ jobs:
     - name: install1
       run:  pip install poetry
     - name: install2
-    run: make install      
+      run: make install      
     - name: lint
       run: make lint
