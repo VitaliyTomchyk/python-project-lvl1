@@ -4,11 +4,7 @@ from random import randint
 
 print("Welcome to the Brain Games!")
 name = prompt.string('May I have your name? ')
-
-
-def welcome_user():
-    return print(f'Hello, {name}!\nAnswer "yes" if the number is even, otherwise answer "no".')
-welcome_user()
+print(f'Hello, {name}!\nAnswer "yes" if the number is even, otherwise answer "no".')
 
 
 def question():
@@ -32,6 +28,8 @@ def question():
                 return print(f"'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again {name}!")
     else:
         return print(f'Congratulations, {name}!')
+
+
 question()
 
 
