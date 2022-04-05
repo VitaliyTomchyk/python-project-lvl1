@@ -1,0 +1,13 @@
+name: Makefile - lint
+
+on: push
+
+jobs:
+  start-linter:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      
+    - name: lint
+      run: make lint
