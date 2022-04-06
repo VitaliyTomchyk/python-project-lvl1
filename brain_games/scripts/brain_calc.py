@@ -13,7 +13,7 @@ def question():
     while question_made < 3:
         fnum = randint(1, 30)
         snum = randint(1, 30)
-        if question_made == 0: 
+        if question_made == 0:
             answer = fnum + snum
             print(f'Question: {fnum} + {snum}')
             player_answer = prompt.string('Your answer: ')
