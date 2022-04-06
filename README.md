@@ -5,3 +5,6 @@
 
 [![Makefile - lint](https://github.com/VitaliyTomchyk/python-project-lvl1/actions/workflows/lint-test.yml/badge.svg)](https://github.com/VitaliyTomchyk/python-project-lvl1/actions/workflows/lint-test.yml)
 
+Asciinema brain-even: https://asciinema.org/a/HCCaX82cgI5lFe0XXpWSNKM9L
+
+Asciinema brain-calc: https://asciinema.org/a/NPScdJjMXwbB8OpNU9fqYeAil

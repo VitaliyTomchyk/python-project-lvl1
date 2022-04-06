@@ -1,4 +1,4 @@
-setup: build publish package-install push
+setup: build publish package-install
 
 install:
 	poetry install
