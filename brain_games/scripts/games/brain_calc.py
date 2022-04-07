@@ -1,59 +1,36 @@
-import prompt
+from brain_games.scripts.games_logic import *
 from random import randint
 
 
-print("Welcome to the Brain Games!")
-name = prompt.string('May I have your name? ')
-print(f'Hello, {name}!\
-\nWhat is the result of the expression?')
-
-
-def question():
-    question_made = 0
-    while question_made < 3:
-        fnum = randint(1, 30)
-        snum = randint(1, 30)
-        if question_made == 0:
-            answer = fnum + snum
-            print(f'Question: {fnum} + {snum}')
-            player_answer = prompt.string('Your answer: ')
-            if str(player_answer) == str(answer):
-                print('Correct!')
-                question_made = question_made + 1
-            else:
-                return print(f"'{player_answer}' is wrong answer ;(.\
- Correct answer was '{answer}'.\nLet's try again, {name}!")
-        elif question_made == 1:
-            if fnum < snum:
-                answer = snum - fnum
-                print(f'Question: {snum} - {fnum}')
-            else:
-                answer = fnum - snum
-                print(f'Question: {fnum} - {snum}')
-            player_answer = prompt.string('Your answer: ')
-            if str(player_answer) == str(answer):
-                print('Correct!')
-                question_made = question_made + 1
-            else:
-                return print(f"'{player_answer}' is wrong answer ;(.\
- Correct answer was '{answer}'.\nLet's try again, {name}!")
-        else:
-            answer = fnum * snum
-            print(f'Question: {fnum} * {snum}')
-            player_answer = prompt.string('Your answer: ')
-            if str(player_answer) == str(answer):
-                print('Correct!')
-                question_made = question_made + 1
-            else:
-                return print(f"'{player_answer}' is wrong answer ;(.\
- Correct answer was '{answer}'.\nLet's try again, {name}!")
+def operation_generator():
+    fnum = randint(1, 20)
+    snum = randint(1, 20)
+    operator = randint(1, 3)
+    if operator == 1:
+        user_answer = answer_getter(f"{fnum} + {snum}")
+        correct_answer = fnum + snum
+        return checker(correct_answer, user_answer)
+    elif operator == 2:
+        user_answer = answer_getter(f"{fnum} * {snum}")
+        correct_answer = fnum * snum
+        return checker(correct_answer, user_answer)
     else:
-        return print(f'Congratulations, {name}!')
+        if fnum < snum:
+            user_answer = answer_getter(f"{snum} - {fnum}")
+            correct_answer = snum - fnum
+            return checker(correct_answer, user_answer)
+        else:
+            user_answer = answer_getter(f"{fnum} - {snum}")
+            correct_answer = fnum - snum
+            return checker(correct_answer, user_answer)
+
+def game_play():
+    name = welcome_user()
+    rules("What's the result of the expression?")
+    i = 0
+    while i < 3:
+        game
+        i = i + 1 in case correct
 
 
-def main():
-    question()
-
-
-if __name__ == '__main__':
-    main()
+game_play()
