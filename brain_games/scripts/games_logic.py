@@ -13,7 +13,8 @@ def rules(rule):
 
 
 def answer_getter(game_question):
-    user_answer = prompt.string('Question: ' + game_question + '\nYour answer: ')
+    user_answer = prompt.string('Question: ' + game_question 
+                                + '\nYour answer: ')
     return user_answer
 
 
@@ -22,6 +23,12 @@ def checker(correct_answer, user_answer):
         return True
     else:
         return False
+
+
+def lost_game(user_answer, correct_answer):
+    print(f"'{user_answer}' is wrong answer ;(.\
+Correct answer was '{correct_answer}'.\
+\nLet's try again, {name}!")
 
 
 def victory(name):

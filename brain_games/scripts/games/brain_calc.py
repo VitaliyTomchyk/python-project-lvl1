@@ -1,4 +1,3 @@
-
 from brain_games.scripts.games_logic import *
 from random import randint
 
@@ -36,8 +35,9 @@ def game_play():
             print('Correct!')
             i = i + 1
         else:
-            return print(f"'' is wrong answer ;(. Correct answer was ''.\
-                \nLet's try again, {name}!")
+            return print((f"'' is wrong answer ;(.\
+ Correct answer was ''.\
+\nLet's try again, {name}!"))
     else:
         return victory(name)
 
