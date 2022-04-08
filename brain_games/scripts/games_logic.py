@@ -12,13 +12,12 @@ def rules(rule):
     print(rule)
 
 
-def tasks(game_question):
-    task = prompt.string('Question: ' + game_question + '\nYour answer: ')
-    return task
+def answer_getter(game_question):
+    user_answer = prompt.string('Question: ' + game_question + '\nYour answer: ')
+    return user_answer
 
 
 def checker(correct_answer, user_answer):
-    user_answer == tasks()
     if user_answer == correct_answer:
         return True
     else:
@@ -32,15 +31,3 @@ def lost_game(message):
 def victory(message):
     print(message)
 
-
-def rounds():
-    questions_made = 0
-    while questions_made < 3:
-        if checker == True:
-            questions_made = questions_made + 1
-            print('Correct!')
-        else:
-            questions_made = 3
-            return print('NOOO')
-    else:
-        return print('NOOO')

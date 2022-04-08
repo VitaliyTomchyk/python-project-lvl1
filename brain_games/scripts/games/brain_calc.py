@@ -1,3 +1,4 @@
+
 from brain_games.scripts.games_logic import *
 from random import randint
 
@@ -24,13 +25,19 @@ def operation_generator():
             correct_answer = fnum - snum
             return checker(correct_answer, user_answer)
 
+
 def game_play():
     name = welcome_user()
     rules("What's the result of the expression?")
     i = 0
     while i < 3:
-        game
-        i = i + 1 in case correct
+        operation_generator()
+        if checker() == True:
+            return print("It's true")
+        if checker() == False:
+            return print("It's false")
+        else:
+            return print("not working")
 
 
 game_play()
