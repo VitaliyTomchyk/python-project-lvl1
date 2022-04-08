@@ -25,12 +25,5 @@ def checker(correct_answer, user_answer):
         return False
 
 
-def lost_game(user_answer, correct_answer):
-    print(f"'{user_answer}' is wrong answer ;(.\
-Correct answer was '{correct_answer}'.\
-\nLet's try again, {name}!")
-
-
 def victory(name):
     print(f'Congratulations, {name}!')
-

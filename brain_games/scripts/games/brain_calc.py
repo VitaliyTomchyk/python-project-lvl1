@@ -1,4 +1,5 @@
-from brain_games.scripts.games_logic import *
+from urllib.parse import uses_params
+from brain_games.scripts.games_logic import victory, answer_getter, checker, rules, welcome_user
 from random import randint
 
 
@@ -9,20 +10,17 @@ def operation_generator():
     if operator == 1:
         user_answer = answer_getter(f"{fnum} + {snum}")
         correct_answer = fnum + snum
-        return checker(str(correct_answer), str(user_answer))
     elif operator == 2:
         user_answer = answer_getter(f"{fnum} * {snum}")
         correct_answer = fnum * snum
-        return checker(str(correct_answer), str(user_answer))
     else:
         if fnum < snum:
             user_answer = answer_getter(f"{snum} - {fnum}")
             correct_answer = snum - fnum
-            return checker(str(correct_answer), str(user_answer))
         else:
             user_answer = answer_getter(f"{fnum} - {snum}")
             correct_answer = fnum - snum
-            return checker(str(correct_answer), str(user_answer))
+    return [checker(str(correct_answer), str(user_answer)), correct_answer, user_answer]
 
 
 def game_play():
@@ -31,15 +29,19 @@ def game_play():
     i = 0
     while i < 3:
         result = operation_generator()
-        if result is True:
+        if result[0] is True:
             print('Correct!')
             i = i + 1
         else:
-            return print((f"'' is wrong answer ;(.\
- Correct answer was ''.\
-\nLet's try again, {name}!"))
+            return print((f"'{result[2]}' is wrong answer ;(.\
+ Correct answer was '{result[1]}'.\nLet's try again, {name}!"))
     else:
         return victory(name)
 
 
-game_play()
+def main():
+    game_play()
+
+
+if __name__ == '__main__':
+    main()
