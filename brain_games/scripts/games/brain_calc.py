@@ -1,5 +1,6 @@
-from urllib.parse import uses_params
-from brain_games.scripts.games_logic import victory, answer_getter, checker, rules, welcome_user
+from brain_games.scripts.games_logic import (victory, answer_getter,
+                                             checker, rules,
+                                             welcome_user)
 from random import randint
 
 
@@ -20,7 +21,8 @@ def operation_generator():
         else:
             user_answer = answer_getter(f"{fnum} - {snum}")
             correct_answer = fnum - snum
-    return [checker(str(correct_answer), str(user_answer)), correct_answer, user_answer]
+    return [checker(str(correct_answer), str(user_answer)),
+            correct_answer, user_answer]
 
 
 def game_play():
