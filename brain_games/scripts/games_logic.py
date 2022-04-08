@@ -24,10 +24,6 @@ def checker(correct_answer, user_answer):
         return False
 
 
-def lost_game(message):
-    print(message)
-
-
-def victory(message):
-    print(message)
+def victory(name):
+    print(f'Congratulations, {name}!')
 

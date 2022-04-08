@@ -10,20 +10,20 @@ def operation_generator():
     if operator == 1:
         user_answer = answer_getter(f"{fnum} + {snum}")
         correct_answer = fnum + snum
-        return checker(correct_answer, user_answer)
+        return checker(str(correct_answer), str(user_answer))
     elif operator == 2:
         user_answer = answer_getter(f"{fnum} * {snum}")
         correct_answer = fnum * snum
-        return checker(correct_answer, user_answer)
+        return checker(str(correct_answer), str(user_answer))
     else:
         if fnum < snum:
             user_answer = answer_getter(f"{snum} - {fnum}")
             correct_answer = snum - fnum
-            return checker(correct_answer, user_answer)
+            return checker(str(correct_answer), str(user_answer))
         else:
             user_answer = answer_getter(f"{fnum} - {snum}")
             correct_answer = fnum - snum
-            return checker(correct_answer, user_answer)
+            return checker(str(correct_answer), str(user_answer))
 
 
 def game_play():
@@ -31,13 +31,15 @@ def game_play():
     rules("What's the result of the expression?")
     i = 0
     while i < 3:
-        operation_generator()
-        if checker() == True:
-            return print("It's true")
-        if checker() == False:
-            return print("It's false")
+        result = operation_generator()
+        if result is True:
+            print('Correct!')
+            i = i + 1
         else:
-            return print("not working")
+            return print(f"'' is wrong answer ;(. Correct answer was ''.\
+                \nLet's try again, {name}!")
+    else:
+        return victory(name)
 
 
 game_play()
