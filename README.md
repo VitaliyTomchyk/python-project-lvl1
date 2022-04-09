@@ -12,3 +12,5 @@ Asciinema brain-calc: https://asciinema.org/a/NPScdJjMXwbB8OpNU9fqYeAil
 Asciinema brain-gcd: https://asciinema.org/a/LQEh5YTGkZVkwgtH1zVVPShlq
 
 Asciinema brain-progression: https://asciinema.org/a/PbFkrIdBFedyXrtGF3BLw6pap
+
+Asciinema brain-prime: https://asciinema.org/a/LwhAuOqgZeQtx0EuxYxrIyOyP
