@@ -1,5 +1,8 @@
-from brain_games.scripts.games_logic import (answer_getter, rules, victory,
-                                             welcome_user, checker)
+from brain_games.scripts.games_logic import answer_getter
+from brain_games.scripts.games_logic import rules
+from brain_games.scripts.games_logic import victory
+from brain_games.scripts.games_logic import welcome_user
+from brain_games.scripts.games_logic import checker
 from random import randint
 
 
