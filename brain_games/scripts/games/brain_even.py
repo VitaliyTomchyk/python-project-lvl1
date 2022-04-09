@@ -22,7 +22,7 @@ def question():
             else:
                 question_made = question_made + 3
                 return print(f"'{player_answer}' is wrong answer ;(.\
- Correct answer was 'yes'.\nLet's try again {name}!")
+ Correct answer was 'yes'.\nLet's try again, {name}!")
         else:
             if player_answer == str('no'):
                 print('Correct!')
@@ -30,7 +30,7 @@ def question():
             else:
                 question_made = question_made + 3
                 return print(f"'{player_answer}' is wrong answer ;(.\
- Correct answer was 'no'.\nLet's try again {name}!")
+ Correct answer was 'no'.\nLet's try again, {name}!")
     else:
         return print(f'Congratulations, {name}!')
 
